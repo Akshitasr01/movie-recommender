@@ -193,6 +193,7 @@ def home():
 def search():
     """API endpoint for movie search"""
     query = request.args.get('q', '')
+    print(query)
     results = search_movies(query)
     return jsonify(results)
 
